@@ -1,0 +1,9 @@
+{
+  "name": "jev-test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch server/index.js",
+    "start": "bun server/index.js"
+  }
+}
