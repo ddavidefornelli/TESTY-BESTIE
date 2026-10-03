@@ -32,7 +32,7 @@ export function creaGrafoTest() {
     g.aggiungiArco(da, a);
   }
 
-  return g.posizionati("A1").impostaNodoFinale("F11");
+  return g.posizionati("C11").impostaNodoFinale("F11");
 }
 
 // Sola visualizzazione: nodo attuale giallo, arrivo verde, ultimo arco rosso.
@@ -121,7 +121,6 @@ export async function avvia() {
     const precedente = g.nodoAttuale();
     g.muoviti(r.answers.test.choice);
     stampaGrafoGUI(g, precedente);
-    await new Promise((resolve) => setTimeout(resolve, 500));
   }
 }
 
