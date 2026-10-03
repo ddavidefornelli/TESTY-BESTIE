@@ -1,0 +1,17 @@
+{
+  "lockfileVersion": 2,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "jev-test",
+      "dependencies": {
+        "enviroment": "^1.0.0",
+      },
+    },
+  },
+  "packages": {
+    "enviroment": ["enviroment@1.0.0", "", { "dependencies": { "lb": "^0.0.1" } }, "sha512-kcteMISnSRZC7fx6VhuqNi9TRCQNyKNnQTuF+puODLe9Ih3y/pXm6uHcsvnXGbxN4PvAPL+z50gX+RXvBgO/Nw=="],
+
+    "lb": ["lb@0.0.1", "", {}, "sha512-WfNQiFD44PgmCtJn18iTk0s2xeV8t23DCXxgPF0q9Ab0NlYEN6DA7Gj/O0NqDjx1cmXxX/o4jDucg1fSdc68dQ=="],
+  }
+}

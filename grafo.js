@@ -8,10 +8,6 @@ export class Grafo {
     this.#orientato = orientato;
   }
 
-  get orientato() {
-    return this.#orientato;
-  }
-
   aggiungiNodo(nodo) {
     if (!this.#adiacenze.has(nodo)) {
       this.#adiacenze.set(nodo, new Set());
@@ -24,26 +20,6 @@ export class Grafo {
     this.aggiungiNodo(da).aggiungiNodo(a);
     this.#adiacenze.get(da).add(a);
     if (!this.#orientato) this.#adiacenze.get(a).add(da);
-    return this;
-  }
-
-  rimuoviArco(da, a) {
-    this.#adiacenze.get(da)?.delete(a);
-    if (!this.#orientato) this.#adiacenze.get(a)?.delete(da);
-    return this;
-  }
-
-  rimuoviNodo(nodo) {
-    this.#adiacenze.delete(nodo);
-    if (this.#posizione && !this.haNodo(this.#posizione.nodo)) {
-      this.#posizione = null;
-    }
-    if (this.#finale && !this.haNodo(this.#finale.nodo)) {
-      this.#finale = null;
-    }
-    for (const vicini of this.#adiacenze.values()) {
-      vicini.delete(nodo);
-    }
     return this;
   }
 

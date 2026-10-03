@@ -1,5 +1,3 @@
-import { Grafo } from "./grafo.js";
-
 export async function faiScegliere(g) {
   const mosseDisponibili = g.mosseDisponibili();
   const criteria = Object.fromEntries(

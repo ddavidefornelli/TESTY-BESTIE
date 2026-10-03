@@ -5,5 +5,8 @@
   "scripts": {
     "dev": "bun --watch server/index.js",
     "start": "bun server/index.js"
+  },
+  "dependencies": {
+    "enviroment": "^1.0.0"
   }
 }

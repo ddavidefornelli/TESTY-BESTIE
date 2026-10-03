@@ -21,8 +21,7 @@ const server = Bun.serve({
       return new Response("Not found", { status: 404 });
     }
 
-    const apiKey =
-      "apikey_260fe52696de0cf4ec69509faef5d937d3d_687eb8d8c69fd7b4cf7b011bfe4482f7ca16194e52131e0f5906ca45b9c75876";
+    const apiKey = process.env.TYPESAFE_API_KEY;
     if (!apiKey) {
       return Response.json(
         { error: "Configura TYPESAFE_API_KEY nel file .env" },
